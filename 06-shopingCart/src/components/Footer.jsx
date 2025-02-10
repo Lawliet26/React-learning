@@ -10,11 +10,11 @@ export default function Footer() {
 
   return (
     <footer className='footer'>
-      {
+      {/* {
         JSON.stringify(cart, null, 2)
-      }
-      {/* <h4>Prueva técnica de react - <span>@Lawliet</span></h4> */}
-      {/* <h5>Shopping Cart con useContext & useReducer</h5> */}
+      } */}
+      <h4>Prueva técnica de react - <span>@Lawliet</span></h4>
+      <h5>Shopping Cart con useContext & useReducer</h5>
     </footer>
   )
 }

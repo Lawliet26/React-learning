@@ -9,7 +9,5 @@ export const useCart = () =>{
         throw new Error("No se puede utilizar un contexto sin un provider");
     }
 
-    return(
-        cart
-    )
+    return cart
 }
