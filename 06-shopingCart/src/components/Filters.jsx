@@ -14,7 +14,6 @@ export default function Filters() {
     }
 
     const handleChangeCategory = (event) =>{
-        //ALGO ESTA MAL
         setFilters(prevState => ({...prevState, category: event.target.value}));
     }
 

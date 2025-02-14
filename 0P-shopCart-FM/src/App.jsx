@@ -1,15 +1,24 @@
+import ConfirmationSection from './components/ConfirmationSection';
 import ProductCard from './components/ProductCard';
-import CartProvider from './context/cartContext';
+import { useProducts } from './hooks/useProducts';
+import Cart from "./components/Cart";
 import './App.css';
 
 function App() {
 
+  const {confirmation} = useProducts();
 
   return (
-    <CartProvider>
+    <>
       <h1>Desserts</h1>
-      <ProductCard></ProductCard>
-    </CartProvider>
+      <div className='app-container'>
+        <ProductCard></ProductCard>
+        <Cart></Cart>
+        {
+          confirmation? <ConfirmationSection></ConfirmationSection> : null
+        }
+      </div>
+    </>
   )
 }
 

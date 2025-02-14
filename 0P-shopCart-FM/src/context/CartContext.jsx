@@ -7,6 +7,18 @@ export default function CartProvider({children}){
 
     const [products, setProducts] = useState([]);
     const [cart,setCart] = useState([]);
+    const [totalQuantity, setTotalQuantity] = useState(0);
+    const [totalCart, setTotalCart] = useState(0);
+    const [confirmation, setConfirmation] = useState(false);
+
+    function confirmOrder (){
+        setConfirmation(true);
+    }
+
+    function restartCart(){
+        setCart([]);
+        setConfirmation(false);
+    }
 
     function addToCart (product) {
         const productInCartIndex = cart.findIndex(item => item.name === product.name);
@@ -53,9 +65,25 @@ export default function CartProvider({children}){
         }
         setCart(newCart);
     }
+    
+    function getTotalPerElemet(){
+         return cart.reduce((total,item)=>{
+            return total + item.quantity
+        },0)
+    }
 
+    function getTotalCart(){
+        const sumatoria= cart.reduce((total,item)=>{
+            return total+(item.quantity*item.price)
+        },0)
+        return(sumatoria.toFixed(2))
+    }
 
-
+    useEffect(() => {
+        setTotalQuantity(getTotalPerElemet())
+        setTotalCart(getTotalCart())
+    }, [cart]);
+    
 
     useEffect(() => {
         async function fetchProducts() {
@@ -90,7 +118,12 @@ export default function CartProvider({children}){
             deleteFromCart,
             handleDecreaseQuantity,
             handleIncreaseQuantity,
-            }}>
+            totalQuantity,
+            totalCart,
+            restartCart,
+            confirmation,
+            confirmOrder,
+        }}>
             {children}
         </CartContext.Provider>
     );

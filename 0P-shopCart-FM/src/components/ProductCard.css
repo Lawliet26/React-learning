@@ -64,6 +64,8 @@ div.product-section{
     cursor: pointer;
     font-weight: 600;
     background-color: var(--Rose-50);
+    box-sizing: border-box;
+    height: 38px;
 }
 
 .product-card-button:hover{
@@ -89,7 +91,7 @@ div.product-section{
     font-family: "RED HAT TEXT";
     font-weight: 500;
     box-sizing: border-box;
-    height: 35px;
+    height: 38px;
 }
 
 .product-card-button-press button{

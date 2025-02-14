@@ -1,0 +1,143 @@
+:root{
+    --Red: rgb(199, 58, 15);
+    --Green: hsl(159, 69%, 38%);
+    --Rose-50: hsl(20, 50%, 98%);
+    --Rose-100: hsl(13, 31%, 94%);
+    --Rose-300: hsl(14, 25%, 72%);
+    --Rose-400: hsl(7, 20%, 60%);
+    --Rose-500: hsl(12, 20%, 44%);
+    --Rose-900: hsl(14, 65%, 9%);
+}
+
+.cart-section{
+    background-color: rgb(255, 255, 255);
+    width: 388px;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: "RED HAT TEXT";
+}
+
+.cart-section-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: rgb(255, 255, 255);
+    width: 388px;
+    border-radius: 12px;
+    padding: 25px;
+    font-family: "RED HAT TEXT";
+}
+
+.cart-section-empty img{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.cart-section-empty span{
+    color: var(--Rose-500);
+}
+
+.cart-title{
+    width: 100%;
+    color:var(--Red);
+    margin-top: 0;
+}
+
+.cart-list{
+    list-style: none;
+    padding: 0;
+}
+
+.cart-list li{
+    border-bottom: 2px solid var(--Rose-50);
+    padding: 14px 0;
+}
+
+.cart-item-name{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cart-item-quantity{
+    color: var(--Red);
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+.cart-item-price{
+    margin-right: 12px;
+    color: var(--Rose-500);
+}
+
+.cart-item-total{
+    font-weight: 500;
+    color: var(--Rose-900);
+}
+
+.cart-info {
+    position: relative;
+}
+
+.cart-item-delete {
+    display: flex;
+    position: absolute;
+    right: 0%; 
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid var(--Rose-500);
+    cursor: pointer;
+    background-color: white;
+}
+
+.cart-total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    width: 100%;
+    align-items: center;
+}
+
+.cart-total strong{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cart-carbon-msj{
+    display: flex;
+    margin-top: 30px;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    background-color: var(--Rose-50);
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+.cart-carbon-msj strong {
+    margin: 0 4px;
+}
+
+.cart-confirm-order{
+    box-sizing: border-box;
+    margin-top: 25px;
+    width: 100%;
+    height: 50px;
+    border-radius:50px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    color: var(--Rose-50);
+    background-color: var(--Red);
+    cursor: pointer;
+}
+
+.cart-confirm-order:hover{
+    background-color: rgb(155, 47, 14);
+}
+

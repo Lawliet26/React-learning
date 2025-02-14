@@ -17,12 +17,14 @@ export default function ProductCard() {
         return cartProduct? cartProduct.quantity: 0;
     }
     
-
+    console.log(cart)
 
     return (
         <div className="product-section">
             {              
                 products.map((product, index) =>{
+
+                    {/*Todo: Separar el boton y su logica en otro componente */}
                     const isProductInCart = checkedProducts(product);
                     const productQuantity = getProductQuantity(product);
 
@@ -39,7 +41,7 @@ export default function ProductCard() {
                             <img className="product-card-img" src={product.desktop} alt={product.name}/>
                             {button}
                             <span className="product-card-category">{product.category}</span>
-                            <h4 className="product-card-name">{product.category}</h4>
+                            <h4 className="product-card-name">{product.name}</h4>
                             <strong className="product-card-price">${product.price.toFixed(2)}</strong>
                         </div>
                     )
