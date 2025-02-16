@@ -16,7 +16,8 @@ div.product-section{
     grid-template-columns: repeat(3 ,1fr );
     gap: 16px;
     padding: 16px;
-    width: 100%;
+    width: 300px;
+    /* max-width: 100%; */
 }
 
 .product-card-container{
@@ -117,4 +118,19 @@ div.product-section{
 
 .product-card-button-press button:hover{
     background-color: var(--Rose-50);
+}
+
+@media (max-width: 1024px){
+
+    div.product-section{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr );
+    }
+}
+
+@media (max-width: 728px){
+    div.product-section{
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr );
+    }
 }

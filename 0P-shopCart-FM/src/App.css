@@ -1,8 +1,28 @@
 .app-container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
+    padding: 0px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+h1{
+    width: 150px;
+    margin-left: 20px;
+}
+
+@media (max-width: 1024px){
+    .app-container{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px){
+    .app-container{
+        flex-direction: column;
+        width: 100%;
+    }
 }

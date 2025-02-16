@@ -9,7 +9,7 @@ function App() {
   const {confirmation} = useProducts();
 
   return (
-    <>
+    <div className='app-section'>
       <h1>Desserts</h1>
       <div className='app-container'>
         <ProductCard></ProductCard>
@@ -18,7 +18,7 @@ function App() {
           confirmation? <ConfirmationSection></ConfirmationSection> : null
         }
       </div>
-    </>
+    </div>
   )
 }
 

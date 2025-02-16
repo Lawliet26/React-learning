@@ -95,6 +95,10 @@
     background-color: white;
 }
 
+.cart-item-delete:hover{
+    border: 1px solid var(--Red);
+}
+
 .cart-total{
     display: flex;
     justify-content: space-between;
@@ -141,3 +145,8 @@
     background-color: rgb(155, 47, 14);
 }
 
+@media (max-width: 768px){
+    .cart-section{
+        width: 100vw;
+    }
+}
